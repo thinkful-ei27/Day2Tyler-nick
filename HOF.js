@@ -16,7 +16,7 @@ function goodbye(){
 repeat(hello, 5);
 repeat(goodbye, 1);
 
-
+const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
 function filter(arr, fn) {
     let myArr = [];
     for(let i = 0; i < arr.length; i++){
@@ -31,10 +31,11 @@ function filterbyR(word){
         return true;
     }
 }
+console.log(myNames.filter(word => word[0] === 'R'))
 
 // DO NOT EDIT BETWEEN THESE LINES, BUT DO READ THE CODE ----->
 // First we setup an array of strings we plan to filter:
-const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
+
 
 // We use your `filter` function here, capturing a new array into `filteredNames`
 // comprised of names that only begin with 'R'
@@ -52,8 +53,10 @@ console.log(filteredNames) // => ['Rich', 'Ray']
 function hazardWarningCreator(typeOfWarning){
   let warningCounter = 0;
   return function(location){
-      warningCounter++
-      console.log(`DANGER! THERE IS A ${typeOfWarning}! HAZARD ALERT HAS TRIGGERED ${warningCounter} time(s) TODAY!`);
+    warningCounter++;
+    let times = 's';
+    if(warningCounter === 1){times = '';}
+      console.log(`DANGER! THERE IS A ${typeOfWarning}! HAZARD ALERT HAS TRIGGERED ${warningCounter} time${times} TODAY!`);
   };
 }
 
