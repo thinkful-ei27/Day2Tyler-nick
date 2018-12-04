@@ -73,3 +73,7 @@ const turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 let filteredMovements = turtleMovements.filter(num => num[0] >= 0 && num[1] >= 0);
 
 const totalMovement = turtleMovements.map(x => x[0] + x[1]);
+
+turtleMovements.forEach(function(element){
+    console.log(element[0] + element[1]);  
+});
