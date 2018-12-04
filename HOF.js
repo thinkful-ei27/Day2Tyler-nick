@@ -83,11 +83,13 @@ turtleMovements.forEach(function(element){
 const decodingArray = 'noggin oreo the moon time tele steed his \
 tent apollo her lives though shoo tofu budapest'.split(' ');
 
+const reducer = (accumulator, currentValue) => {
+  if(currentValue.length === 3){
+      return accumulator + ' ';
+  } else return accumulator + currentValue[currentValue.length - 1].toUpperCase();
+};
 
-
-/*const reducer = ('', currentValue) => accumulator + (if(currentValue.length === 3){
-    return ' ';
-} else return currentValue[currentValue.length - 1].toUpperCase();)*/
+console.log(decodingArray.reduce(reducer, ''));
 
 /*console.log(decodingArray.reduce('', currentValue)) => accumulator + (if(currentValue.length === 3){
     return ' ';
