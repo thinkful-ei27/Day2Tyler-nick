@@ -67,3 +67,12 @@ snowing('Kansas City, Missouri');
 rocksWarning('Vancouver, Washington');
 willRobinson('OuterSpace/England?');
 snowing('Kansas City, Missouri');
+
+
+const turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+let filteredMovements = turtleMovements.filter(num => num[0] >= 0 && num[1] >= 0);
+
+
+
+
+
