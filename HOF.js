@@ -77,3 +77,31 @@ const totalMovement = turtleMovements.map(x => x[0] + x[1]);
 turtleMovements.forEach(function(element){
     console.log(element[0] + element[1]);  
 });
+
+//reduce function (Decoding!)
+
+const decodingArray = 'noggin oreo the moon time tele steed his \
+tent apollo her lives though shoo tofu budapest'.split(' ');
+
+
+
+/*const reducer = ('', currentValue) => accumulator + (if(currentValue.length === 3){
+    return ' ';
+} else return currentValue[currentValue.length - 1].toUpperCase();)*/
+
+/*console.log(decodingArray.reduce('', currentValue)) => accumulator + (if(currentValue.length === 3){
+    return ' ';
+} else return currentValue[currentValue.length - 1].toUpperCase();)*/
+
+//This is not what we were supposed to do
+/*const reducer = function(array){
+    let tempString ='';
+    for(let x = 0; x < array.length; x++){
+        if(array[x].length === 3){
+            tempString = tempString + ' ';
+        } else tempString = tempString + array[x][array[x].length - 1].toUpperCase();
+    }
+    return tempString;
+}
+
+console.log(reducer(decodingArray)); */
